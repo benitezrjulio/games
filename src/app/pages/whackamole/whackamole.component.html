@@ -1,0 +1,13 @@
+<div class="inicio">
+<p class="tiempo"> tiempo:{{contador}}</p>
+<p class="puntuacion"> Puntuación:{{score}}</p>
+<button (click)="starting()">Comenzar</button>
+</div>
+
+<div class="campo">
+<div *ngFor="let fila of filasArray ; let i = index" class="fila">
+    <div *ngFor="let column of columnaArray ; let j= index" class="column" >
+        <img src="{{imageSrc[i][j]}}" alt="" (click)="sumaScore(i,j)">
+</div>
+</div>
+</div>

@@ -1,0 +1,26 @@
+
+
+<div class="tablero">
+  <p class="contador">intentos:{{ contador }}</p>
+  <label for="filas">Filas</label>
+  <input type="number" id="filas" [(ngModel)]="filas" />
+
+  <label for="columns">Columnas</label>
+  <input type="number" id="columns" [(ngModel)]="columns" />
+  <div class="botones">
+    <button class="boton_pintar" (click)="pintarTabla($event)" Pintar imagenes>
+      Encontrar tesoro
+    </button>
+    <button (click)="resetTabla()">Borrar Tablero</button>
+  </div>
+</div>
+
+<div *ngIf="pintarTabla">
+  <table>
+    <tr *ngFor="let fila of filasArray; let i = index">
+      <td *ngFor="let columnas of columnasArray; let j = index">
+        <img [src]="imagenSrc[i][j]" (click)="cambiarImagen(i, j)" />
+      </td>
+    </tr>
+  </table>
+</div>

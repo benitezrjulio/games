@@ -1,0 +1,92 @@
+// .contador{
+// color: rgb(97, 97, 190);
+// font-size: 40px;
+// }
+
+
+$primary-color: #FBC02D ;
+$secondary-color: #D32F2F  ;
+
+.contador {
+  font-size: 1.2rem;
+  color: red;
+  margin: 1rem 0;
+}
+
+.tablero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+
+  label {
+    font-size: 1.2rem;
+    color: $primary-color;
+    margin-bottom: 0.5rem;
+  }
+
+  input[type="number"] {
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    color: red;
+    margin-bottom: 2rem;
+    width: 51%;
+    transition: box-shadow 0.2s ease-in-out;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .botones {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+
+    button {
+      border: none;
+      border-radius: 0.5rem;
+      padding: 1rem 2rem;
+      margin: 0 1rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: white;
+      background-color: $primary-color;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    .boton_pintar {
+      background-color: $secondary-color;
+    }
+  }
+}
+
+table {
+  margin-top: 2rem;
+//   border-collapse: collapse;
+
+  td {
+    padding: 0.5rem;
+    border: 2px solid #ccc;
+    transition: border-color 0.2s ease-in-out;
+
+    &:hover {
+      border-color: rgb(218, 111, 111);
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+
